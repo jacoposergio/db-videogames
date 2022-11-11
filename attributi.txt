@@ -55,7 +55,7 @@ classificazione_id         fk
 
 videogame_premio
 videogame_id               fk
-premio_id         fk
+premio_id                  fk
 
 
 ---------------------------------------------------------
