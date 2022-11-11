@@ -64,7 +64,7 @@ software_house
 
 ID:                        pk
 nome: varchar(30)
-piva:  varchar(20)
+piva:  varchar(11)
 citta: varchar(20)
 nazione: varchar(20)
 
