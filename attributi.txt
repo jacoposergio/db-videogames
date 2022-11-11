@@ -1,0 +1,114 @@
+videogame
+
+ID:                        pk
+titolo: varchar(30)
+trama:  text
+data_rilascio: datetime
+software_house_id          fk
+
+---------------------------------------------------------
+piattaforma
+
+ID:                        pk
+tipo:  varchar(30)
+
+---------------------------------------------------------
+categoria
+
+ID:                        pk
+tipo:  varchar(30)
+
+---------------------------------------------------------
+classificazione
+
+ID:                        pk
+tipo:  varchar(30)
+
+---------------------------------------------------------
+premio
+
+ID:                        pk
+tipo:  varchar(50)
+
+---------------------------------------------------------
+
+videogame_piattaforma
+
+videogame_id               fk
+piattaforma_id             fk
+
+---------------------------------------------------------
+
+videogame_categoria
+
+videogame_id               fk
+categoria_id               fk
+
+---------------------------------------------------------
+
+videogame_classificazione
+
+videogame_id               fk
+classificazione_id         fk
+
+--------------------------------------------------------
+
+videogame_premio
+videogame_id               fk
+premio_id         fk
+
+
+---------------------------------------------------------
+
+software_house
+
+ID:                        pk
+nome: varchar(30)
+piva:  varchar(20)
+citta: varchar(20)
+nazione: varchar(20)
+
+---------------------------------------------------------
+
+torneo
+
+ID:                        pk
+nome: varchar(30)
+anno:  smallint
+citta: varchar(20)
+
+---------------------------------------------------------
+
+giocatore
+
+ID:                        pk
+nome: varchar(20)
+cognome: varchar(20)
+nickname: varchar(15)
+citta: varchar(20)
+
+---------------------------------------------------------
+
+torneo_giocatore
+
+giocatore_id               fk
+torneo_id                  fk
+
+---------------------------------------------------------
+
+recensione
+
+ID:                        pk
+titolo: varchar(30)
+testo: text
+voto: tinyint
+videogame_id               fk
+
+---------------------------------------------------------
+
+giocatore_recensione
+
+giocatore_id               fk
+recensione_id              fk
+
+---------------------------------------------------------
